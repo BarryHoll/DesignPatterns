@@ -9,7 +9,7 @@ public class WmvPlayer implements MovieFileFormatPlayer {
 
 	@Override
 	public void playWmv(String fileName) {
-		System.out.println("Playing wmv file. Title: " + fileName);
+		System.out.println("Playing wmv file. Title: " + fileName + ".");
 	}
 
 	@Override

@@ -4,7 +4,7 @@ public class AviPlayer implements MovieFileFormatPlayer {
 
 	@Override
 	public void playAvi(String fileName) {
-		System.out.println("Playing avi file. Title: " + fileName);
+		System.out.println("Playing avi file. Title: " + fileName + ".");
 	}
 
 	@Override

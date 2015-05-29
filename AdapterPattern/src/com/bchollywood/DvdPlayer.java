@@ -8,7 +8,7 @@ public class DvdPlayer implements MovieDiscPlayer {
 	public void play(String movieType, String fileName) {
 
 		if (movieType.equalsIgnoreCase("DVD")) {					// The DVD Player, out of the box,
-			System.out.println("Playing DVD. Title: " + fileName);  //   can play DVDs.
+			System.out.println("Playing DVD. Title: " + fileName  + ".");  //   can play DVDs.
 		} else if (movieType.equalsIgnoreCase("avi") 
 				|| movieType.equalsIgnoreCase("wmv") 				// To play movie file formats,
 				|| movieType.equalsIgnoreCase("mp4")) {     		//   movieAdapter is used.
