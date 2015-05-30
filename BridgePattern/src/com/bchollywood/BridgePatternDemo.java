@@ -4,10 +4,10 @@ public class BridgePatternDemo {
 
 	public static void main(String[] args) {
 
-		Building bungalo = new House(3,2, new Bungalo());
+		Building bungalow = new House(3,2, new Bungalow());
 		Building twoStory = new House(4, 4, new TwoStory());
 		
-		bungalo.build();
+		bungalow.build();
 		twoStory.build();
 
 	}
