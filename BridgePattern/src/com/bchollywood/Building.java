@@ -1,10 +1,10 @@
 package com.bchollywood;
 
-public abstract class House {
+public abstract class Building {
 	
 	protected BuildAPI buildAPI;
 	
-	protected House(BuildAPI buildAPI) {
+	protected Building(BuildAPI buildAPI) {
 		this.buildAPI = buildAPI;
 	}
 	
