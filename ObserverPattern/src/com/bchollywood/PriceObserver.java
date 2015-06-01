@@ -5,6 +5,11 @@ public class PriceObserver implements Observer {
 	private double itemPrice;
 	private String itemName;
 	
+	public PriceObserver(String itemName, double initialPrice) {
+		this.itemName = itemName;
+		this.itemPrice = initialPrice;
+	}
+	
 	public PriceObserver(Subject priceGrabber, String itemName, double initialPrice) {
 		this.itemName = itemName;
 		this.itemPrice = initialPrice;
@@ -18,7 +23,12 @@ public class PriceObserver implements Observer {
 	}
 
 	private void printItemPrice() {
-		System.out.println("Current price of " + itemName + " is " + itemPrice + ".\n");
+		System.out.println("Updated price of " + itemName + " is " + itemPrice + ".\n");
+	}
+	
+	@Override
+	public String toString() {
+		return "Item name: " + itemName + ",\nItem price: " + itemPrice + ".\n";
 	}
 
 }

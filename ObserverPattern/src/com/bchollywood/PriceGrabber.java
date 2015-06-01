@@ -11,26 +11,36 @@ public class PriceGrabber implements Subject {
 		this.observers = new ArrayList<Observer>();
 	}
 
-	public void setItemPrice(double itemPrice) {
+	public void setItemPrice(Observer o, double itemPrice) {
 		this.itemPrice = itemPrice;
-		notifyObservers();
+		notifyObservers(o);
+	}
+	
+	public void printAllItemPrices() {
+		System.out.println("Printing all items...");
+		for (Observer o : observers) {
+			System.out.println(o.toString());
+		}
 	}
 
 	@Override
 	public void register(Observer o) {
 		observers.add(o);
+		System.out.println("Adding...\n" + o.toString());
 	}
 
 	@Override
 	public void unregister(Observer o) {
 		int index = observers.indexOf(o);
 		observers.remove(index);
+		System.out.println("Removing...\n" + o.toString());
 	}
 
 	@Override
-	public void notifyObservers() {
-		for (Observer o : observers) {
-			o.update(itemPrice);
+	public void notifyObservers(Observer o) {
+		for (Observer ob : observers) {
+			if(o==ob)
+				o.update(itemPrice);
 		}
 	}
 
