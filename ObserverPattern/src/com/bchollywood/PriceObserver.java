@@ -4,10 +4,10 @@ public class PriceObserver implements Observer {
 	
 	private double itemPrice;
 	private String itemName;
-	private Subject priceGrabber;
 	
 	public PriceObserver(Subject priceGrabber, String itemName, double initialPrice) {
-		this.priceGrabber = priceGrabber;
+		this.itemName = itemName;
+		this.itemPrice = initialPrice;
 		priceGrabber.register(this);
 	}
 
