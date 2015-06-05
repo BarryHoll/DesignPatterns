@@ -31,7 +31,7 @@ public abstract class Monster {
 	}
 	
 	public void attack() {
-		System.out.println("The " + getName() + " " + getAttackDescription());
+		System.out.println("The " + getName() + " " + getAttackDescription() + ".");
 	}
 	
 	public void stalk() {
@@ -39,7 +39,7 @@ public abstract class Monster {
 	}
 	
 	public void party() {
-		System.out.println("The " + getName() + " likes to " + getPartyProfile());
+		System.out.println("The " + getName() + " likes to " + getPartyProfile() + ".");
 	}
 	
 
